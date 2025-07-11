@@ -22,8 +22,8 @@ flowchart TD
     
     TC --> AC[ [active_context.md](mdc:tasks/active_context.md) ]
 
-    AC --> ER[ [error-documentation.mdc](mdc:.cursor/rules/error-documentation.mdc)]
-    AC --> LL[ [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) ]
+    AC --> ER[ [error-documentation.mdc](mdc:.kilocode/rules/error-documentation.mdc)]
+    AC --> LL[ [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) ]
     
     subgraph LIT[ @docs/literature ]
         L1[...]
@@ -76,11 +76,11 @@ flowchart TD
   - Recent changes
   - Next steps
 
-  6. [error-documentation.mdc](mdc:.cursor/rules/error-documentation.mdc) (.cursor/rules/error-documentation.mdc): 
+  6. [error-documentation.mdc](mdc:.kilocode/rules/error-documentation.mdc) (.kilocode/rules/error-documentation.mdc): 
   - During your interaction, if you find a fix to a mistake in this project or a correction you received reusable, you should take note in the @error-documentation.mdc file so you will not make the same mistake again.
   - Known issues: their state, context, and resolution
 
-  7. [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) (.cursor/rules/lessons-learned.mdc): learning journal for each project
+  7. [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) (.kilocode/rules/lessons-learned.mdc): learning journal for each project
   - It captures important patterns, preferences, and project intelligence
   - It is detailed in @lessons-learned.mdc
 
@@ -133,7 +133,7 @@ flowchart TD
 flowchart TD
     Start[Start] --> Context[Check Memory Files (Core Files always ("docs/": (a)"docs/architecture.md" (b)"docs/product_requirement_docs.md" (c)"docs/technical.md". "tasks/" : (a)"tasks/active_context.md" (b)"tasks/tasks_plan.md"), rest based on context (if needed further: "docs/literature" and "tasks/rfc")) ]
     Context --> Update[Update Documentation]
-    Update --> Rules[Update [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc), [error-documentation.mdc](mdc:.cursor/rules/error-documentation.mdc) if needed]
+    Update --> Rules[Update [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc), [error-documentation.mdc](mdc:.kilocode/rules/error-documentation.mdc) if needed]
     Rules --> Execute[Execute Task]
     Execute --> Document[Document Changes in Memory Files ("docs/": (a)"docs/architecture.md" (b)"docs/product_requirement_docs.md" (c)"docs/technical.md". "tasks/" : (a)"tasks/active_context.md" (b)"tasks/tasks_plan.md" if needed further: "docs/literature" and "tasks/rfc") ]
 ```
@@ -155,7 +155,7 @@ flowchart TD
         P1[Review Core Files]
         P2[Document Current State in [active_context.md](mdc:tasks/active_context.md) and [tasks_plan.md](mdc:tasks/tasks_plan.md) ]
         P3[Clarify Next Steps and document in [tasks_plan.md](mdc:tasks/tasks_plan.md) ]
-        P4[Update [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc), [error-documentation.mdc](mdc:.cursor/rules/error-documentation.mdc)]
+        P4[Update [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc), [error-documentation.mdc](mdc:.kilocode/rules/error-documentation.mdc)]
         P5 Update [ [architecture.md](mdc:docs/architecture.md) ]
         
         P1 --> P2 --> P3 --> P4
@@ -166,9 +166,9 @@ flowchart TD
 
 Note: When triggered by **update memory files**, I MUST review every Core memory  file, even if some don't require updates. Focus particularly on [active_context.md](mdc:tasks/active_context.md) and [tasks_plan.md](mdc:tasks/tasks_plan.md) as they track current state. And [architecture.md](mdc:docs/architecture.md) has a section of current workflow that also gets updated by any code updates.
 
-# Project Intelligence ( [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) [.cursor/rules/lessons-learned.mdc] )
+# Project Intelligence ( [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) [.kilocode/rules/lessons-learned.mdc] )
 
-The [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) file is my learning journal for each project. It captures important patterns, preferences, and project intelligence that help me work more effectively. As I work with you and the project, I'll discover and document key insights that aren't obvious from the code alone.
+The [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) file is my learning journal for each project. It captures important patterns, preferences, and project intelligence that help me work more effectively. As I work with you and the project, I'll discover and document key insights that aren't obvious from the code alone.
 
 ```mermaid
 flowchart TD
@@ -177,11 +177,11 @@ flowchart TD
     subgraph Learn [Learning Process]
         D1[Identify Pattern]
         D2[Validate with User]
-        D3[Document in [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) ]
+        D3[Document in [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) ]
     end
     
     subgraph Apply [Usage]
-        A1[Read [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) ]
+        A1[Read [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) ]
         A2[Apply Learned Patterns]
         A3[Improve Future Work]
     end
@@ -198,4 +198,4 @@ flowchart TD
 - Evolution of project decisions
 - Tool usage patterns
 
-The format is flexible - focus on capturing valuable insights that help me work more effectively with you and the project. Think of [lessons-learned.mdc](mdc:.cursor/rules/lessons-learned.mdc) as a living document that grows smarter as we work together.
+The format is flexible - focus on capturing valuable insights that help me work more effectively with you and the project. Think of [lessons-learned.mdc](mdc:.kilocode/rules/lessons-learned.mdc) as a living document that grows smarter as we work together.
