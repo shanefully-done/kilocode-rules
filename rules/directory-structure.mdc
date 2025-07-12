@@ -1,21 +1,25 @@
 ---
 description: directory structure to follow
-globs: 
+globs:
 alwaysApply: false
 ---
+
 ---
+
 description: the top-level directory structure for the project
-globs: 
+globs:
 alwaysApply: false
----     
+
+---
+
 # Directory Structure
+
 ```mermaid
 flowchart TD
     Root[Project Root]
     Root --> Docs[docs/]
     Root --> Tasks[tasks/]
-    Root --> Cursor[.kilocode/rules/]
-    Root --> CLINE[.clinerules]
+    Root --> KiloCode[.kilocode/rules/]
     Root --> SourceCode[src/]
     Root --> Test[test/]
     Root --> Utils[utils/]
