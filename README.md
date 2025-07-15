@@ -1,6 +1,6 @@
 # kilocode-rules
 
-Opinionated configuration for [Kilo Code](https://kilocode.ai/) — a local AI coding agent in VS Code. This repo contains system prompts, rules, and custom mode setups that shape how Kilo Code interacts with your codebase.
+Opinionated configuration for [Kilo Code](https://kilocode.ai/) — a local AI coding agent in VS Code. This repo contains system prompts and rule files that shape how Kilo Code interacts with your codebase.
 
 ---
 
@@ -17,8 +17,7 @@ Opinionated configuration for [Kilo Code](https://kilocode.ai/) — a local AI c
 
 - `rules/` & `rules-*` – structured prompts for behavior control
 - `system-prompt-*` – main system instructions
-- `modes.yaml` – custom modes (`Chat`, `Write`, `MCP`)
-- Bun-based runtime setup (see [Why Bun?](#why-bun))
+- Bun-based runtime setup
 - Minimal dependencies, zero TypeScript scaffolding
 
 This repo assumes you know what you're doing. Defaults are heavily customized and may break at any time.
@@ -44,16 +43,11 @@ mv kilocode-rules .kilocode
 
 ---
 
-## 🧠 Modes: Chat, Write, MCP
+## 🧠 Prompt Entry Point
 
-This setup includes three custom modes:
+The default entry point for large or multi-step prompts is **Orchestrator**, which is included by default in Kilo Code.
 
-* `Chat` – The default mode. All prompts should *start* and *end* in this mode.
-* `Write` – Optimized for content or code generation. Use sparingly.
-* `MCP` – Model Context Protocol integration. Advanced; use only if you're bridging external context.
-
-> Mode configurations are in [`modes.yaml`](./modes.yaml).
-> See Kilo Code’s [Custom Modes Guide](https://kilocode.ai/docs/features/custom-modes#custom-mode-configuration-json-format) for full specs.
+You may define your own prompt flow strategies as needed — this repo stays unopinionated about modes.
 
 ---
 
@@ -82,5 +76,5 @@ curl -fsSL https://bun.sh/install | bash
 ## 🧪 Tips
 
 * Keep prompts minimal and specific.
-* Always route back to `Chat` mode to avoid dead-end threads.
+* Use **Orchestrator** for complex flows — or define your own logic.
 * Disable conflicting VS Code extensions (like Copilot) for clean integration.
