@@ -22,7 +22,7 @@ Follow these steps in your terminal:
     cd your-project-root
 
     # Clone the repo
-    git clone [https://github.com/shanefully-done/kilocode-rules.git](https://github.com/shanefully-done/kilocode-rules.git)
+    git clone https://github.com/shanefully-done/kilocode-rules.git
     ```
 
 2.  **Rename the directory:**
